@@ -24,11 +24,12 @@ struct Node{
 
 class SinglyLinkedList{
 private:
-    Node* rootNode;
     int count;
 public:
+    Node* head;
+
     SinglyLinkedList(){
-        rootNode = nullptr;
+        head = nullptr;
         count = 0;
     }
 
@@ -36,8 +37,8 @@ public:
         Node* newNode = new Node;
 
         newNode->value = value;
-        newNode->next = rootNode;
-        rootNode = newNode;
+        newNode->next = head;
+        head = newNode;
 
         count++;
     }
@@ -47,11 +48,11 @@ public:
         newNode->value = value;
         newNode->next = nullptr;
 
-        if(rootNode == nullptr){
-            rootNode = newNode;
+        if(head == nullptr){
+            head = newNode;
 
         } else {
-            Node* tmpNode = rootNode;
+            Node* tmpNode = head;
 
             while(tmpNode->next){
                 tmpNode = tmpNode->next;
@@ -77,7 +78,7 @@ public:
             Node* newNode = new Node;
             newNode->value = value;
 
-            Node* tmpNode = rootNode;
+            Node* tmpNode = head;
 
             position-=2;
             while(tmpNode->next && position){
@@ -87,17 +88,17 @@ public:
 
             newNode->next = tmpNode->next;
             tmpNode->next = newNode;
+            count++;
         }
-        count++;
     }
 
     bool deleteFirstNode(){
-        if(rootNode == nullptr){
+        if(head == nullptr){
             return false;
         }
 
-       Node* tmpNode = rootNode;
-        rootNode = rootNode->next;
+       Node* tmpNode = head;
+        head = head->next;
 
         delete tmpNode;
 
@@ -106,13 +107,13 @@ public:
     }
 
     bool deleteLast(){
-        if(rootNode == nullptr){
+        if(head == nullptr){
             return false;
         } else {
-            Node* tmpNode = rootNode;
+            Node* tmpNode = head;
 
-            if(rootNode->next == nullptr){
-                rootNode = nullptr;
+            if(head->next == nullptr){
+                head = nullptr;
                 delete tmpNode;
             } else {
                 while(tmpNode->next->next){
@@ -131,7 +132,7 @@ public:
     }
 
     bool deleteNthNode(int position){
-        if(rootNode == nullptr){
+        if(head == nullptr){
             return false;
         }
 
@@ -146,7 +147,7 @@ public:
             return deleteLast();
         } else {
             // The node in
-            Node* tmpNode = rootNode;
+            Node* tmpNode = head;
             position-=2;
 
             while(tmpNode && position){
@@ -168,12 +169,12 @@ public:
         std::cout << count << std::endl;
     }
 
-    void traverse(){
-        if(rootNode == nullptr){
+    void iterativeTraverse(){
+        if(head == nullptr){
             std::cout << "Your Linked List Is Empty !\n";
         }
         else {
-            Node* tmpNode = rootNode;
+            Node* tmpNode = head;
 
             while(tmpNode){
                 std::cout << tmpNode->value << " ";
@@ -185,22 +186,32 @@ public:
         }
     }
 
-    void reverse(){
+    void recursiveTraverse(Node* currentNode = nullptr){
+        if(currentNode == nullptr){
+            return;
+        }
+
+        std::cout << currentNode->value << " ";
+
+        recursiveTraverse(currentNode->next);
+    }
+
+    void reverse() const{
         SinglyLinkedList reversedLinkedList = *new SinglyLinkedList();
 
-        if(rootNode == nullptr){
+        if(head == nullptr){
             std::cout << "Your linked list is empty\n";
             return;
         }
 
-        Node* tmpNode = rootNode;
+        Node* tmpNode = head;
 
         while (tmpNode){
             reversedLinkedList.insertFirst(tmpNode->value);
             tmpNode = tmpNode->next;
         }
 
-        reversedLinkedList.traverse();
+        reversedLinkedList.iterativeTraverse();
     }
 };
 int main(){
@@ -213,8 +224,8 @@ int main(){
     linkedListInstance.insertLast(400);
     linkedListInstance.deleteLast();
     linkedListInstance.deleteNthNode(3);
-    linkedListInstance.traverse();
-    linkedListInstance.reverse();
-
+    linkedListInstance.recursiveTraverse(linkedListInstance.head);
+//    linkedListInstance.iterativeTraverse();
+//    linkedListInstance.reverse();
     return 0;
 }

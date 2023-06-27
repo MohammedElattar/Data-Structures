@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled DS/1_Array.cpp DS/2_Singly_Linked-List.cpp)
+add_executable(untitled DS/2_Doubly_Linked_List.cpp)

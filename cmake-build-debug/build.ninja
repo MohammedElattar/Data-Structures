@@ -49,14 +49,8 @@ cmake_ninja_workdir = D$:/Coding/Courses/untitled/cmake-build-debug/
 
 build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
 
-build CMakeFiles/untitled.dir/DS/1_Array.cpp.obj: CXX_COMPILER__untitled_Debug D$:/Coding/Courses/untitled/DS/1_Array.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles\untitled.dir\DS\1_Array.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
-  OBJECT_DIR = CMakeFiles\untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DS
-
-build CMakeFiles/untitled.dir/DS/2_Singly_Linked-List.cpp.obj: CXX_COMPILER__untitled_Debug D$:/Coding/Courses/untitled/DS/2_Singly_Linked-List.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles\untitled.dir\DS\2_Singly_Linked-List.cpp.obj.d
+build CMakeFiles/untitled.dir/DS/2_Doubly_Linked_List.cpp.obj: CXX_COMPILER__untitled_Debug D$:/Coding/Courses/untitled/DS/2_Doubly_Linked_List.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\DS\2_Doubly_Linked_List.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DS
@@ -69,7 +63,7 @@ build CMakeFiles/untitled.dir/DS/2_Singly_Linked-List.cpp.obj: CXX_COMPILER__unt
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/DS/1_Array.cpp.obj CMakeFiles/untitled.dir/DS/2_Singly_Linked-List.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/DS/2_Doubly_Linked_List.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir
