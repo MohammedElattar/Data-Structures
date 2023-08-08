@@ -1,6 +1,6 @@
 # ninja log v5
 12	1371	7090695620900462	CMakeFiles/untitled.dir/main.cpp.obj	f4e003d91dabe2f4
-1478	1763	7095872252598030	untitled.exe	5862b3c06c3a3bc4
+1852	2151	7099105237144931	untitled.exe	ad0a0e771c4bdcae
 1	1089	7079333068965347	CMakeFiles/Mohamed_Attar.dir/test.cpp.obj	4c82c23e50f6b45e
 117	5158	7093226394109313	CMakeFiles/untitled.dir/DS/1_Array.cpp.obj	dae0f0d7477a6937
 10	4318	7093951125098217	CMakeFiles/untitled.dir/DS/2_Linked-List.cpp.obj	a046c4e486d22e46
@@ -12,3 +12,4 @@
 9	3279	7094742654385575	CMakeFiles/untitled.dir/DS/2_Singly_Linked_List.cpp.obj	988f5a130ad5458f
 1	1778	7095862376016799	CMakeFiles/untitled.dir/DS/4_Stack.cpp.obj	ba7de4202992e432
 9	1477	7095872249825632	CMakeFiles/untitled.dir/DS/4_Stack_Linked_List_Based_Implementation.cpp.obj	6d9c99d0a5d7c54d
+37	1851	7099105234252698	CMakeFiles/untitled.dir/DS/6-Balanced-Parentheses.cpp.obj	5f26ab47ee3dafce

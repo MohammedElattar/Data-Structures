@@ -49,8 +49,8 @@ cmake_ninja_workdir = D$:/Coding/Courses/untitled/cmake-build-debug/
 
 build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
 
-build CMakeFiles/untitled.dir/DS/4_Stack_Linked_List_Based_Implementation.cpp.obj: CXX_COMPILER__untitled_Debug D$:/Coding/Courses/untitled/DS/4_Stack_Linked_List_Based_Implementation.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles\untitled.dir\DS\4_Stack_Linked_List_Based_Implementation.cpp.obj.d
+build CMakeFiles/untitled.dir/DS/6-Balanced-Parentheses.cpp.obj: CXX_COMPILER__untitled_Debug D$:/Coding/Courses/untitled/DS/6-Balanced-Parentheses.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\DS\6-Balanced-Parentheses.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DS
@@ -63,7 +63,7 @@ build CMakeFiles/untitled.dir/DS/4_Stack_Linked_List_Based_Implementation.cpp.ob
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/DS/4_Stack_Linked_List_Based_Implementation.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/DS/6-Balanced-Parentheses.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir

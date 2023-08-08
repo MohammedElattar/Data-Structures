@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled DS/4_Stack_Linked_List_Based_Implementation.cpp)
+add_executable(untitled DS/6-Balanced-Parentheses.cpp)
